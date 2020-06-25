@@ -6,10 +6,15 @@ spring:
 eureka:
   client:
     service-url:
-      default-zone: http://localhost:8761/
+      default-zone: http://localhost:8761/eureka
 zuul:
   ignored-services: '*'
   routes:
     auth-service:
       path: /auth/**
       service-id: auth-service
+management:
+  endpoint:
+   web:
+     exposure:
+       include: "*"
