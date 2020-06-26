@@ -18,6 +18,11 @@ zuul:
       sensitive-headers: 'Cookie,Set-Cookie '
       service-id: auth-service
       strip-prefix: false
+    customer-service:
+      path: /auth1/**
+      sensitive-headers: 'Cookie,Set-Cookie '
+      service-id: customer-service
+      strip-prefix: false
 management:
   endpoints:
     web:
